@@ -1,4 +1,3 @@
-'use client'
 import { Button } from '@/components/ui/button'
 import { ArrowRight, ChevronRight } from 'lucide-react'
 import Link from 'next/link'
@@ -11,7 +10,7 @@ import AnimatedGradientText from "@/components/magicui/animated-gradient-text";
 function HeroSection() {
     return (
         <section id="hero" className="relative mx-auto mt-32 max-w-[80rem] px-6 text-center md:px-8">
-            <h1 className="bg-gradient-to-br dark:from-white from-black from-30% dark:to-white/40 to-black/40 bg-clip-text py-6 text-5xl font-medium leading-none tracking-tighter text-transparent text-balance sm:text-6xl md:text-7xl lg:text-8xl translate-y-[-1rem] animate-fade-in [--animation-delay:200ms]">Zen Mail is the new way
+        <h1 className="bg-gradient-to-br dark:from-white from-black from-30% dark:to-white/40 to-black/40 bg-clip-text py-6 text-5xl font-medium leading-none tracking-tighter text-transparent text-balance sm:text-6xl md:text-7xl lg:text-8xl translate-y-[-1rem] animate-fade-in [--animation-delay:200ms]">Zen Mail is the new way
                 <br className="hidden md:block" /> to run campaigns.</h1>
 
             <p className="mb-8 text-lg tracking-tight text-gray-400 md:text-xl text-balance translate-y-[-1rem] animate-fade-in [--animation-delay:400ms]">
