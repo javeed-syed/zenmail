@@ -8,7 +8,26 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-  	extend: {
+	  extend: {
+		animation: {
+			shimmer: "shimmer 8s infinite",
+			gradient: "gradient 8s linear infinite",
+		},
+		keyframes: {
+			shimmer: {
+			"0%, 90%, 100%": {
+				"background-position": "calc(-100% - var(--shimmer-width)) 0",
+			},
+			"30%, 60%": {
+				"background-position": "calc(100% + var(--shimmer-width)) 0",
+			},
+			},
+			gradient: {
+				to: {
+					backgroundPosition: "var(--bg-size) 0",
+				},
+			},
+		},
   		backgroundImage: {
   			'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
   			'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
@@ -65,3 +84,5 @@ const config: Config = {
   plugins: [require("tailwindcss-animate")],
 };
 export default config;
+
+

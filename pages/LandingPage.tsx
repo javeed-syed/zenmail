@@ -5,11 +5,13 @@ import { FilePenIcon, GlobeIcon, MailOpenIcon, SendIcon } from "lucide-react"
 import { GitHubLogoIcon, InstagramLogoIcon, LinkedInLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons"
 import HeaderSection from "@/pages/Sections/HeaderSection"
 import FooterSection from "@/pages/Sections/FooterSection"
+import HeroSection from "./Sections/HeroSection"
 
 export default function LandingPage() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <HeaderSection />
+      <HeroSection />
       {/* <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-r from-primary to-primary/90">
           <div className="container px-4 md:px-6 text-center text-primary-foreground">
