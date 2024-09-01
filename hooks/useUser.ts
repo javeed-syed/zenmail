@@ -10,6 +10,3 @@ function useUser (id) {
     isError: error
   }
 }
-
-// usage
-// const { user, isLoading, isError } = useUser(id)
