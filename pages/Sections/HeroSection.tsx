@@ -1,3 +1,4 @@
+'use client'
 import { Button } from '@/components/ui/button'
 import { ArrowRight, ChevronRight } from 'lucide-react'
 import Link from 'next/link'
@@ -13,13 +14,13 @@ function HeroSection() {
             <h1 className="bg-gradient-to-br dark:from-white from-black from-30% dark:to-white/40 to-black/40 bg-clip-text py-6 text-5xl font-medium leading-none tracking-tighter text-transparent text-balance sm:text-6xl md:text-7xl lg:text-8xl translate-y-[-1rem] animate-fade-in [--animation-delay:200ms]">Zen Mail is the new way
                 <br className="hidden md:block" /> to run campaigns.</h1>
 
-            <p className="mb-12 text-lg tracking-tight text-gray-400 md:text-xl text-balance translate-y-[-1rem] animate-fade-in [--animation-delay:400ms]">
+            <p className="mb-8 text-lg tracking-tight text-gray-400 md:text-xl text-balance translate-y-[-1rem] animate-fade-in [--animation-delay:400ms]">
                 <br className="hidden md:block" /> Drag-n-Drop Email Editor Powered by <Link href="https://unlayer.com/embed" className="bg-gradient-to-r from-indigo-500 to-violet-700 bg-clip-text text-transparent hover:underline">unlayer</Link>
                 <br className="hidden md:block" /> &#38; In-built Code Editor for <Link href="https://react.email/" className="bg-gradient-to-r from-indigo-500 to-violet-700 bg-clip-text text-transparent hover:underline">React email</Link>
             </p>
-            <div className='flex flex-col justify-center m-4 gap-4 md:flex md:gap-8'>
-            <AnimatedShinyTextDemo />
-            <AnimatedGradientTextDemo />
+            <div className='flex flex-col justify-center m-4 gap-4 md:flex-row md:gap-8 mb-12'>
+            <OpenSource />
+            <NewAnnoucment />
             </div>
             <Button>Get Started <ArrowRight size={18} className='ml-2' /> </Button>
         </section>
@@ -30,14 +31,14 @@ export default HeroSection
 
 
 
-export async function AnimatedGradientTextDemo() {
+export async function NewAnnoucment() {
   return (
-    <div className="z-10 flex items-center justify-center">
+    <div className="z-10 flex items-center justify-center cursor-pointer">
       <AnimatedGradientText>
         🎉 <hr className="mx-2 h-4 w-[1px] shrink-0 bg-gray-300" />{" "}
         <span
           className={cn(
-            `inline animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`,
+            `inline animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent font-[1rem]`,
           )}
         >
           Introducing Zen Mail Editor
@@ -48,7 +49,7 @@ export async function AnimatedGradientTextDemo() {
   );
 }
 
-export async function AnimatedShinyTextDemo() {
+export async function OpenSource() {
   return (
     <div className="z-10 flex items-center justify-center">
       <div

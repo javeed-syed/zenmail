@@ -14,12 +14,13 @@ import {
 
 function HeaderSection() {
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' })
+  // TODO: Remove this hook and make this server rendered page
   return (
     <>
       <header className="fixed left-0 top-0 z-50 w-full animate-fade-in border-b backdrop-blur-[12px] [--animation-delay:600ms]">
         <div className={`${isMobile ? 'mx-0' : 'mx-16'}`}>
           <div className="flex h-[3.5rem] items-center justify-between px-10">
-            <a className="text-md flex items-center" href="/">Zen Mail</a>
+            <a className="text-lg font-semibold flex items-center" href="/">Zen Mail</a>
             {isMobile ? <>
               <Drawer>
                 <DrawerTrigger><MenuIcon /></DrawerTrigger>
