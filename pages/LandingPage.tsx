@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { FilePenIcon, GlobeIcon, MailOpenIcon, SendIcon } from "lucide-react"
 import { GitHubLogoIcon, InstagramLogoIcon, LinkedInLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons"
-import HeaderSection from "@/components/HeaderSection"
-import FooterSection from "@/components/FooterSection"
+import HeaderSection from "@/pages/Sections/HeaderSection"
+import FooterSection from "@/pages/Sections/FooterSection"
 
 export default function LandingPage() {
   return (

@@ -1,5 +1,5 @@
 import { GitHubLogoIcon, InstagramLogoIcon, LinkedInLogoIcon, TwitterLogoIcon } from '@radix-ui/react-icons'
-import { Link } from 'lucide-react'
+import Link from 'next/link'
 import React from 'react'
 
 function FooterSection() {
@@ -30,8 +30,9 @@ function FooterSection() {
             <span className="sr-only">LinkedIn</span>
           </Link>
         </div>
-        <p className="text-xs text-muted-foreground ml-auto">Built by Syed Javeed</p>
       </footer>
+      <p className="text-xs text-muted-foreground ml-auto text-center">Built by Syed Javeed</p>
+
       </>
   )
 }
