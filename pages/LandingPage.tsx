@@ -10,7 +10,7 @@ export default function LandingPage() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <HeaderSection />
-      <main className="flex-1">
+      {/* <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-r from-primary to-primary/90">
           <div className="container px-4 md:px-6 text-center text-primary-foreground">
             <div className="space-y-4">
@@ -60,8 +60,8 @@ export default function LandingPage() {
             </div>
           </div>
         </section>
-      </main>
-      <FooterSection />
+      </main> */}
+      {/* <FooterSection /> */}
     </div>
   )
 }
