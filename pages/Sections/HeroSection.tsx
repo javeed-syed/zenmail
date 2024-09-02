@@ -4,8 +4,8 @@ import Link from 'next/link'
 import React from 'react'
 import { ArrowRightIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 import { cn } from "@/lib/utils";
-import AnimatedShinyText from "@/components/magicui/animated-shiny-text";
-import AnimatedGradientText from "@/components/magicui/animated-gradient-text";
+import AnimatedShinyText from "@/components/ui/animated-shiny-text";
+import AnimatedGradientText from "@/components/ui/animated-gradient-text";
 
 function HeroSection() {
     return (
