@@ -2,7 +2,6 @@
 import Link from 'next/link'
 import { MenuIcon } from 'lucide-react'
 import React from 'react'
-import { useMediaQuery } from 'react-responsive'
 import {
   Drawer,
   DrawerContent,
@@ -13,17 +12,14 @@ import {
 } from "@/components/ui/drawer"
 
 function HeaderSection() {
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' })
-  // TODO: Remove this hook and make this server rendered page
   return (
     <>
       <header className="fixed left-0 top-0 z-50 w-full animate-fade-in border-b backdrop-blur-[12px] [--animation-delay:600ms]">
-        <div className={`${isMobile ? 'mx-0' : 'mx-16'}`}>
+        <div className="mx-4 md:mx-16">
           <div className="flex h-[3.5rem] items-center justify-between px-10">
             <a className="text-lg font-semibold flex items-center" href="/">Zen Mail</a>
-            {isMobile ? <>
               <Drawer>
-                <DrawerTrigger><MenuIcon /></DrawerTrigger>
+                <DrawerTrigger className="md:hidden"><MenuIcon /></DrawerTrigger>
                 <DrawerContent>
                   <DrawerHeader className='flex justify-between align-top'>
                     <DrawerTitle className='mx-auto'>Welcome to Zenmail</DrawerTitle>
@@ -33,11 +29,9 @@ function HeaderSection() {
                   </DrawerFooter>
                 </DrawerContent>
               </Drawer>
-            </> : <>
-              <div className="flex gap-4">
+              <div className="md:flex gap-4 hidden">
                 <AuthButtons />
               </div>
-            </>}
           </div>
         </div>
       </header>
