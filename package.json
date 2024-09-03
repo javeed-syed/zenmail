@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 8080",
+    "dev": "next dev -p",
     "build": "next build",
-    "start": "next start -p 8080",
+    "start": "next start",
     "lint": "next lint",
-    "start:production": "pm2 start 'next start -p 8080' --name 'zenmail' --watch"
+    "start:production": "pm2 start 'next start' --name 'zenmail' --watch"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.1",
