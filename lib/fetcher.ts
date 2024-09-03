@@ -1,31 +1,37 @@
-import axios from 'axios';
+import axios, { AxiosRequestConfig } from 'axios';
+import { Fetcher } from 'swr';
 
-const fetcher = (config) => async (...args) => {
-  const [url] = args;
-  
-  const defaultConfig = {
+interface User {
+  // Define User interface properties here
+}
+
+const fetcher: Fetcher<User, string> = (url: string, config?: AxiosRequestConfig) => {
+  const defaultConfig: AxiosRequestConfig = {
     method: 'GET',
     headers: {},
     timeout: 10000,
   };
 
-  const mergedConfig = { ...defaultConfig, ...config, url };
+  const mergedConfig: AxiosRequestConfig = { ...defaultConfig, ...config, url };
 
-  try {
-    const response = await axios(mergedConfig);
-    return response.data;
-  } catch (error) {
-    if (error.response) {
-      console.error('Response error:', error.response.data);
-      console.error('Status:', error.response.status);
-      console.error('Headers:', error.response.headers);
-    } else if (error.request) {
-      console.error('Request error:', error.request);
-    } else {
-      console.error('Error:', error.message);
-    }
-    throw error;
-  }
+  return axios(mergedConfig)
+    .then(response => response.data)
+    .catch(error => {
+      if (axios.isAxiosError(error)) {
+        if (error.response) {
+          console.error('Response error:', error.response.data);
+          console.error('Status:', error.response.status);
+          console.error('Headers:', error.response.headers);
+        } else if (error.request) {
+          console.error('Request error:', error.request);
+        } else {
+          console.error('Error:', error.message);
+        }
+      } else {
+        console.error('Unexpected error:', error);
+      }
+      throw error;
+    });
 };
 
 export default fetcher;
