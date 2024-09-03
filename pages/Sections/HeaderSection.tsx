@@ -1,4 +1,3 @@
-'use client'
 import Link from 'next/link'
 import { MenuIcon } from 'lucide-react'
 import React from 'react'
@@ -10,6 +9,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer"
+import { ModeToggle } from '@/components/toogle'
 
 function HeaderSection() {
   return (
@@ -43,6 +43,7 @@ export default HeaderSection
 
 function AuthButtons() {
   return (<div className="ml-auto flex h-full items-center gap-4">
+    <ModeToggle />
     <Link href="/signin" prefetch={false}>
       <button className="text-sm disabled:pointer-events-none h-9 px-4 py-2 rounded-md font-medium transition-colors">Log in</button>
     </Link>

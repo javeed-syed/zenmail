@@ -18,7 +18,9 @@ function HeroSection() {
                 <br className="hidden md:block" /> &#38; In-built Code Editor for <Link href="https://react.email/" className="bg-gradient-to-r from-indigo-500 to-violet-700 bg-clip-text text-transparent hover:underline">React email</Link>
             </p>
             <div className='flex flex-col justify-center m-4 gap-4 md:flex-row md:gap-8 mb-12'>
-            <OpenSource />
+            <Link href="https://github.com/javeed-syed/zenmail">
+              <OpenSource />
+            </Link>    
             <NewAnnoucment />
             </div>
             <Button>Get Started <ArrowRight size={18} className='ml-2' /> </Button>
