@@ -32,7 +32,7 @@ export default HeroSection
 
 
 
-export async function NewAnnoucment() {
+export function NewAnnoucment() {
   return (
     <div className="z-10 flex items-center justify-center cursor-pointer">
       <AnimatedGradientText>
@@ -50,7 +50,7 @@ export async function NewAnnoucment() {
   );
 }
 
-export async function OpenSource() {
+export function OpenSource() {
   return (
     <div className="z-10 flex items-center justify-center">
       <div
