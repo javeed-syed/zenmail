@@ -13,7 +13,7 @@ function HeroSection() {
         <h1 className="bg-gradient-to-br dark:from-white from-black from-30% dark:to-white/40 to-black/40 bg-clip-text py-6 text-5xl font-medium leading-none tracking-tighter text-transparent text-balance sm:text-6xl md:text-7xl lg:text-8xl translate-y-[-1rem] animate-fade-in [--animation-delay:200ms]">Zen Mail is the new way
                 <br className="hidden md:block" /> to run campaigns.</h1>
 
-            <p className="mb-8 text-lg tracking-tight text-gray-400 md:text-xl text-balance translate-y-[-1rem] animate-fade-in [--animation-delay:400ms]">
+            <p className="mb-8 text-lg tracking-tight text-[var(--subtitle)] md:text-xl text-balance translate-y-[-1rem] animate-fade-in [--animation-delay:400ms]">
                 <br className="hidden md:block" /> Drag-n-Drop Email Editor Powered by <Link href="https://unlayer.com/embed" className="bg-gradient-to-r from-indigo-500 to-violet-700 bg-clip-text text-transparent hover:underline">unlayer</Link>
                 <br className="hidden md:block" /> &#38; In-built Code Editor for <Link href="https://react.email/" className="bg-gradient-to-r from-indigo-500 to-violet-700 bg-clip-text text-transparent hover:underline">React email</Link>
             </p>
