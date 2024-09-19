@@ -16,7 +16,7 @@ function WaitingListSection() {
                 Revolutionize Your Email Experience
               </h1>
               <p className="max-w-[700px] mx-auto text-lg md:text-xl text-[var(--subtitle)]">
-                Elevate your email workflow with our powerful 'Mail as a Service' platform. Streamline your
+                Elevate your email workflow with our powerful <strong>&lsquo;Mail as a Service platform&lsquo;</strong>. Streamline your
                 communication, boost productivity, and take control of your inbox.
                 </p>
                 <p className="text-[var(--subtitle)]"> Join our waiting list and be the first to know when we launch!</p>
