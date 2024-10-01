@@ -44,10 +44,10 @@ export default HeaderSection
 function AuthButtons() {
   return (<div className="ml-auto flex h-full items-center gap-4">
     <ModeToggle />
-    <Link href="/signin" prefetch={false}>
+    <Link href="/auth/login" prefetch={false}>
       <button className="text-sm disabled:pointer-events-none h-9 px-4 py-2 rounded-md font-medium transition-colors">Log in</button>
     </Link>
-    <Link href="/signup" prefetch={false}>
+    <Link href="/auth/register" prefetch={false}>
       <button className="rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80 h-9 px-4 py-2 text-sm" >Sign up</button>
     </Link>
   </div>
